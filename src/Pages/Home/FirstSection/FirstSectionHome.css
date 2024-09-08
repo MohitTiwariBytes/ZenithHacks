@@ -69,4 +69,8 @@
   .text span {
     width: 95%;
   }
+
+  .moon {
+    margin-top: -200px;
+  }
 }
