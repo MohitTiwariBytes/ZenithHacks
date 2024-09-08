@@ -6,8 +6,7 @@ import { gsap } from "gsap";
 
 const FirstSection = () => {
   const globeRef = useRef();
-  const sectionRef = useRef();
-  const [currentHeight, setCurrentHeight] = useState(window.innerHeight);
+  
 
   useEffect(() => {
     if (globeRef.current) {
@@ -33,48 +32,9 @@ const FirstSection = () => {
     };
   }, []);
 
-  useEffect(() => {
-    const handleScroll = (e) => {
-      if (e.deltaY > 0) {
-        // Scrolling down - decrease height
-        setCurrentHeight((prevHeight) => {
-          const newHeight = prevHeight - 250;
-          gsap.to(sectionRef.current, {
-            height: newHeight,
-            duration: 0.5,
-            ease: "power2.out",
-          });
-          return newHeight;
-        });
-      } else {
-        // Scrolling up - increase height
-        setCurrentHeight((prevHeight) => {
-          const newHeight = Math.min(window.innerHeight, prevHeight + 150);
-          gsap.to(sectionRef.current, {
-            height: newHeight,
-            duration: 0.5,
-            ease: "power2.out",
-          });
-          return newHeight;
-        });
-      }
-    };
-
-    window.addEventListener("wheel", handleScroll);
-
-    return () => {
-      window.removeEventListener("wheel", handleScroll);
-    };
-  }, []);
-
   return (
     <div className="main-home-first-section">
-      <div
-        id="firstSectionHome"
-        className="firstSectionHome"
-        ref={sectionRef}
-        style={{ height: "100vh" }}
-      >
+      <div id="firstSectionHome" className="firstSectionHome">
         <div className="text">
           <h1>Zenith 2025</h1>
           <span>

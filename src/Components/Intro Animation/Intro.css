@@ -18,6 +18,7 @@
   font-size: 20px;
   color: rgb(224, 224, 224);
   overflow: hidden;
+  flex-direction: column;
 }
 
 .intro h1 {
@@ -26,4 +27,19 @@
 
 .wrapper {
   overflow: hidden;
+}
+
+.loader {
+  height: 5px;
+  width: 300px;
+  background: rgb(56, 56, 56);
+  border-radius: 2px;
+  margin-top: 60px;
+}
+
+.loader-inner {
+  height: 100%;
+  width: 0%;
+  background: white;
+  border-radius: 2px;
 }

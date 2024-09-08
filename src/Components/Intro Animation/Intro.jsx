@@ -20,17 +20,27 @@ const Intro = () => {
     );
 
     setInterval(() => {
-      gsap.to(".intro h1", {
-        y: -100,
-        duration: 0.3,
-        ease: "expo.inOut",
-        animationDelay: 0.1,
-        stagger: 0.3,
-      });
-      gsap.to(".main-intro", {
-        height: 0,
+      gsap.to(".loader-inner", {
+        width: "100%",
         duration: 0.6,
         ease: "power3.inOut",
+        onComplete: () => {
+          gsap.to(".loader", { opacity: 0, duration: 0.2 });
+          gsap.to(".intro h1", {
+            y: -100,
+            duration: 0.3,
+            ease: "expo.inOut",
+            animationDelay: 0.1,
+            stagger: 0.3,
+            onComplete: () => {
+              gsap.to(".main-intro", {
+                height: "0",
+                duration: 0.6,
+                ease: "power3.inOut",
+              });
+            },
+          });
+        },
       });
     }, 1800);
   }, []);
@@ -39,6 +49,9 @@ const Intro = () => {
       <div className="intro">
         <div className="wrapper">
           <h1>Zenith Hacks 2025</h1>
+        </div>
+        <div className="loader">
+          <div className="loader-inner"></div>
         </div>
       </div>
     </div>
