@@ -3,6 +3,7 @@ import "./Home.css";
 import Intro from "../../Components/Intro Animation/Intro";
 import Navbar from "../../Components/Navbar/Navbar";
 import FirstSection from "./FirstSection/FirstSectionHome";
+import SecondSection from "./SecondSection/SecondSection";
 
 const Home = () => {
   return (
@@ -11,6 +12,7 @@ const Home = () => {
         <Intro />
         <Navbar />
         <FirstSection></FirstSection>
+        <SecondSection></SecondSection>
       </div>
     </div>
   );

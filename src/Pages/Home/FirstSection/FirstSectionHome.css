@@ -61,9 +61,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  cursor: grab;
 }
 
-.moon:active {
-  cursor: grabbing;
+@media (max-width: 700px) {
+  .text span {
+    width: 95%;
+  }
 }

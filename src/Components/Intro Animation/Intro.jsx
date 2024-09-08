@@ -42,7 +42,7 @@ const Intro = () => {
           });
         },
       });
-    }, 1800);
+    }, 800);
   }, []);
   return (
     <div className="main-intro">

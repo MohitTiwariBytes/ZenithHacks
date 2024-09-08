@@ -6,12 +6,13 @@ import { gsap } from "gsap";
 
 const FirstSection = () => {
   const globeRef = useRef();
-  
 
   useEffect(() => {
     if (globeRef.current) {
       const controls = globeRef.current.controls();
       controls.enableZoom = false; // Disable the zoom
+      controls.autoRotate = true;
+      controls.enableRotate = false;
     }
 
     // Disable scrolling on the globe itself
