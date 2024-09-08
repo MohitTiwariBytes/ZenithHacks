@@ -32,13 +32,14 @@
 
 .text {
   width: 100%;
-  height: 80%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   font-family: "Satoshi Regular";
   position: relative;
+  z-index: 1;
 }
 
 .text h1 {
