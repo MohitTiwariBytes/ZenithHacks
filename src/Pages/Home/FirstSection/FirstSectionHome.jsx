@@ -3,6 +3,7 @@ import "./FirstSectionHome.css";
 import Button from "../../../Components/Button/Button";
 import Globe from "react-globe.gl";
 import { gsap } from "gsap";
+import EarthTexture from "../../../assets/Earth Texture/earthmap1k.jpg";
 
 const FirstSection = () => {
   const globeRef = useRef();
@@ -50,7 +51,7 @@ const FirstSection = () => {
         <div className="moon">
           <Globe
             ref={globeRef}
-            globeImageUrl="https://s3-us-west-2.amazonaws.com/s.cdpn.io/17271/lroc_color_poles_1k.jpg"
+            globeImageUrl="//unpkg.com/three-globe/example/img/earth-blue-marble.jpg"
             backgroundColor="rgba(0,0,0,0)"
             width={1650}
             height={1650}
